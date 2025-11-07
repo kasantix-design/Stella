@@ -32,7 +32,7 @@ nav a:hover {
 }
 
 .hero {
-  background: url("images/hovedbilde.jpg") center/cover no-repeat;
+  background: url("images/Hovedbilde.JPG") center/cover no-repeat;
   height: 80vh;
   display: flex;
   flex-direction: column;
