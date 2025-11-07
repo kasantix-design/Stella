@@ -32,14 +32,17 @@ nav a:hover {
 }
 
 .hero {
-  background: url('https://placehold.co/1200x600') center/cover no-repeat;
-  height: 100vh;
+  background: url("images/hovedbilde.jpg") center/cover no-repeat;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0 2rem;
+  color: white;
+  padding: 2rem;
 }
+
 
 .hero h1 {
   font-size: 3rem;
