@@ -1,87 +1,111 @@
+/* === Basestil === */
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  background-color: #111;
-  color: #f5f5f5;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+  background-color: #fff;
+  color: #333;
 }
 
+/* === Header === */
 header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #000;
-  position: sticky;
-  top: 0;
+  flex-wrap: wrap;
 }
 
-.logo {
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-container img {
+  height: 60px;
+  margin-right: 1rem;
+}
+
+.logo-container span {
   font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* === Nav === */
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
   font-weight: bold;
 }
 
-nav a {
-  color: #f5f5f5;
-  margin-left: 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
 nav a:hover {
-  color: gold;
+  text-decoration: underline;
 }
 
+/* === Hero === */
 .hero {
-  background: url("images/hovedbilde.jpg") center/cover no-repeat;
-  height: 80vh;
+  background: url("images/stella-hero.jpg") center/cover no-repeat;
+  height: 60vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
   color: white;
-  padding: 2rem;
+  text-shadow: 1px 1px 4px black;
 }
 
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  color: gold;
-}
-
+/* === Content === */
 .content {
-  padding: 4rem 2rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 2rem;
   text-align: center;
 }
 
+/* === Gallery === */
 .gallery .images {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
+  padding: 1rem;
 }
 
-.gallery img {
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
   width: 300px;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
-.gallery img:hover {
+.gallery-item img:hover {
   transform: scale(1.05);
 }
 
-footer {
-  background-color: #000;
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #777;
+.gallery-item p {
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+}
+
