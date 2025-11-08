@@ -89,8 +89,8 @@ nav a:hover {
 }
 
 .gallery-item img {
-  width: 300px;
-  height: 225px;
+  width: 310px;
+  height: 230px;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
