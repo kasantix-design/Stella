@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kull 1 – Kennel Stella</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Kennel Stella logo">
+        <span>Kennel Stella</span>
+      </a>
+    </div>
+    <nav>
+      <a href="index.html#om">Om Oss</a>
+      <a href="index.html#foreldre">Foreldre</a>
+      <a href="kull1.html">Kull 1</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="background-image: url('images/bowie-hero.jpg');">
+    <h1>Kull 1</h1>
+  </section>
+
+  <!-- Valpe 1 -->
+  <section class="content">
+    <h2>Valp 1</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="valp1-track">
+        <div class="carousel-item"><img src="images/valp1-1.jpg" alt="Valp 1 - bilde 1"></div>
+        <div class="carousel-item"><img src="images/valp1-2.jpg" alt="Valp 1 - bilde 2"></div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="moveCarousel('valp1-track', -1)">←</button>
+        <button onclick="moveCarousel('valp1-track', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valp 2 -->
+  <section class="content">
+    <h2>Valp 2</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="valp2-track">
+        <div class="carousel-item"><img src="images/valp2-1.jpg" alt="Valp 2 - bilde 1"></div>
+        <div class="carousel-item"><img src="images/valp2-2.jpg" alt="Valp 2 - bilde 2"></div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="moveCarousel('valp2-track', -1)">←</button>
+        <button onclick="moveCarousel('valp2-track', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valp 3 -->
+  <section class="content">
+    <h2>Valp 3</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="valp3-track">
+        <div class="carousel-item"><img src="images/valp3-1.jpg" alt="Valp 3 - bilde 1"></div>
+        <div class="carousel-item"><img src="images/valp3-2.jpg" alt="Valp 3 - bilde 2"></div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="moveCarousel('valp3-track', -1)">←</button>
+        <button onclick="moveCarousel('valp3-track', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valp 4 -->
+  <section class="content">
+    <h2>Valp 4</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="valp4-track">
+        <div class="carousel-item"><img src="images/valp4-1.jpg" alt="Valp 4 - bilde 1"></div>
+        <div class="carousel-item"><img src="images/valp4-2.jpg" alt="Valp 4 - bilde 2"></div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="moveCarousel('valp4-track', -1)">←</button>
+        <button onclick="moveCarousel('valp4-track', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valp 5 -->
+  <section class="content">
+    <h2>Valp 5</h2>
+    <div class="carousel">
+      <div class="carousel-track" id="valp5-track">
+        <div class="carousel-item"><img src="images/valp5-1.jpg" alt="Valp 5 - bilde 1"></div>
+        <div class="carousel-item"><img src="images/valp5-2.jpg" alt="Valp 5 - bilde 2"></div>
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="moveCarousel('valp5-track', -1)">←</button>
+        <button onclick="moveCarousel('valp5-track', 1)">→</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kennel Stella.</p>
+  </footer>
+
+  <script>
+    function moveCarousel(id, direction) {
+      const track = document.getElementById(id);
+      const totalItems = track.children.length;
+      const width = track.offsetWidth;
+      const current = Math.round(track.scrollLeft / width);
+      let newIndex = current + direction;
+      if (newIndex < 0) newIndex = totalItems - 1;
+      if (newIndex >= totalItems) newIndex = 0;
+      track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
