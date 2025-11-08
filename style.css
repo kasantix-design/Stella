@@ -164,4 +164,10 @@ footer {
   background-color: #eee;
   font-size: 0.9rem;
 }
+.kull1-hero {
+  height: 45vh;
+  max-height: 400px;
+  background-size: cover;
+  background-position: center;
+}
 
