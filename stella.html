@@ -5,64 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stella – Kennel Stella</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .hero {
-  background: url("../images/stella-hero.jpg") center center / cover no-repeat;
-  height: 60vh;
-  min-height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  text-shadow: 1px 1px 4px black;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-
-    .carousel {
-      max-width: 800px;
-      margin: 2rem auto;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-      width: 300%;
-    }
-
-    .carousel-item {
-      flex: 0 0 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .carousel-item img {
-      width: 90%;
-      border-radius: 10px;
-      max-height: 400px;
-      object-fit: cover;
-    }
-
-    .carousel-buttons {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    .carousel-buttons button {
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
-      margin: 0 1rem;
-      background-color: #333;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -78,40 +21,28 @@
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
   </header>
-<script>
-function moveCarousel(id, direction) {
-  const track = document.getElementById(id);
-  const totalItems = track.children.length;
-  const width = track.offsetWidth;
-  const current = Math.round(track.scrollLeft / width);
-  let newIndex = current + direction;
-  if (newIndex < 0) newIndex = totalItems - 1;
-  if (newIndex >= totalItems) newIndex = 0;
-  track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
-}
-</script>
 
-  <section class="hero">Stella</section>
+  <section class="hero" style="background-image: url('images/stella-hero.jpg');">
+    <h1>Stella</h1>
+  </section>
 
   <section class="content">
     <p>
-      Stella er vår vakre og livlige hannhund. Han har flott stamtavle, god helse og en leken men trygg personlighet.
-      Stella trives med både mennesker og dyr, og han er en stolt far til våre valper.
+      Stella er vår kjærlige og rolige tispe. Hun har nydelig lynne, er sosial og trygg. Stella elsker å være ute i naturen, og gir kjærlighet og balanse til flokken.
     </p>
   </section>
 
- <section class="carousel">
-  <div class="carousel-track" id="stella-track">
-    <div class="carousel-item"><img src="images/stella1.jpg" alt="Stella 1"></div>
-    <div class="carousel-item"><img src="images/stella2.jpg" alt="Stella 2"></div>
-    <div class="carousel-item"><img src="images/stella3.jpg" alt="Stella 3"></div>
-  </div>
-  <div class="carousel-buttons">
-    <button onclick="moveCarousel('stella-track', -1)">←</button>
-    <button onclick="moveCarousel('stella-track', 1)">→</button>
-  </div>
-</section>
-
+  <section class="carousel">
+    <div class="carousel-track" id="stella-track">
+      <div class="carousel-item"><img src="images/stella1.jpg" alt="Stella 1"></div>
+      <div class="carousel-item"><img src="images/stella2.jpg" alt="Stella 2"></div>
+      <div class="carousel-item"><img src="images/stella3.jpg" alt="Stella 3"></div>
+    </div>
+    <div class="carousel-buttons">
+      <button onclick="moveCarousel('stella-track', -1)">←</button>
+      <button onclick="moveCarousel('stella-track', 1)">→</button>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Kennel Stella.</p>
@@ -131,8 +62,4 @@ function moveCarousel(id, direction) {
   </script>
 </body>
 </html>
-    .carousel-buttons button {
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
-      margin: 0 1rem;
-      background-color: #333;
+
