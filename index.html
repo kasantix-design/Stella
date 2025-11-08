@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kennel Stella </title>
+  <title>Kennel Stella</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
@@ -21,22 +21,9 @@
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
-<script>
-function moveCarousel(id, direction) {
-  const track = document.getElementById(id);
-  const totalItems = track.children.length;
-  const width = track.offsetWidth;
-  const current = Math.round(track.scrollLeft / width);
-  let newIndex = current + direction;
-  if (newIndex < 0) newIndex = totalItems - 1;
-  if (newIndex >= totalItems) newIndex = 0;
-  track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
-}
-</script>
 
-  <section class="hero">
+  <section class="hero" style="background-image: url('images/stella-hero.jpg');">
     <h1>Velkommen til Kennel Stella</h1>
-    
   </section>
 
   <section id="om" class="content">
@@ -74,6 +61,20 @@ function moveCarousel(id, direction) {
   <footer>
     <p>&copy; 2025 Kennel Stella. Nettside bygget av Reidun Sandvik.</p>
   </footer>
+
+  <!-- Flyttet hit -->
+  <script>
+  function moveCarousel(id, direction) {
+    const track = document.getElementById(id);
+    const totalItems = track.children.length;
+    const width = track.offsetWidth;
+    const current = Math.round(track.scrollLeft / width);
+    let newIndex = current + direction;
+    if (newIndex < 0) newIndex = totalItems - 1;
+    if (newIndex >= totalItems) newIndex = 0;
+    track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
+  }
+  </script>
 </body>
 </html>
 
