@@ -66,6 +66,10 @@ nav a:hover {
   padding-top: 4rem;
   box-sizing: border-box;
 }
+.bowie-hero {
+  height: 45vh;
+  max-height: 400px;
+}
 
 /* === Content === */
 .content {
