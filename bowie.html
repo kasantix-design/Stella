@@ -78,6 +78,18 @@
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
   </header>
+<script>
+function moveCarousel(id, direction) {
+  const track = document.getElementById(id);
+  const totalItems = track.children.length;
+  const width = track.offsetWidth;
+  const current = Math.round(track.scrollLeft / width);
+  let newIndex = current + direction;
+  if (newIndex < 0) newIndex = totalItems - 1;
+  if (newIndex >= totalItems) newIndex = 0;
+  track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
+}
+</script>
 
   <section class="hero">Bowie</section>
 
