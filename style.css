@@ -58,12 +58,14 @@ nav a:hover {
   height: 60vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* <- Endres */
   flex-direction: column;
   text-align: center;
   color: white;
   text-shadow: 1px 1px 4px black;
+  padding-top: 4rem; /* legg gjerne til dette også */
 }
+
 
 /* === Content === */
 .content {
