@@ -93,9 +93,8 @@ nav a:hover {
 }
 
 .gallery-item img {
-  width: 310px;
-  height: 230px;
-  object-fit: cover;
+  width: 400px;         /* ← Økt fra 300px */
+  max-width: 90%;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
