@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stella – Kennel Stella</title>
+  <title>Bowie – Kennel Stella</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     .hero {
@@ -49,6 +49,71 @@
       margin-top: 1rem;
     }
 
+    .carousel-buttons button {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      margin: 0 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Kennel Stella logo">
+        <span>Kennel Stella</span>
+      </a>
+    </div>
+    <nav>
+      <a href="index.html#om">Om Oss</a>
+      <a href="index.html#foreldre">Foreldre</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">Bowie</section>
+
+  <section class="content">
+    <p>
+      Stella er vår vakre og livlige hannhund. Han har flott stamtavle, god helse og en leken men trygg personlighet.
+      Stella trives med både mennesker og dyr, og han er en stolt far til våre valper.
+    </p>
+  </section>
+
+  <section class="carousel">
+    <div class="carousel-track" id="bowie-track">
+      <div class="carousel-item"><img src="images/stella1.jpg" alt="Stella 1"></div>
+      <div class="carousel-item"><img src="images/stella2.jpg" alt="Stella 2"></div>
+      <div class="carousel-item"><img src="images/stella3.jpg" alt="Stella 3"></div>
+    </div>
+    <div class="carousel-buttons">
+      <button onclick="moveCarousel('stella-track', -1)">←</button>
+      <button onclick="moveCarousel('stella-track', 1)">→</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kennel Stella. Alle rettigheter reservert.</p>
+  </footer>
+
+  <script>
+    function moveCarousel(id, direction) {
+      const track = document.getElementById(id);
+      const totalItems = track.children.length;
+      const width = track.offsetWidth;
+      const current = Math.round(track.scrollLeft / width);
+      let newIndex = current + direction;
+      if (newIndex < 0) newIndex = totalItems - 1;
+      if (newIndex >= totalItems) newIndex = 0;
+      track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
     .carousel-buttons button {
       font-size: 1.5rem;
       padding: 0.5rem 1rem;
