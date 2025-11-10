@@ -3,10 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kull 1 – Kennel Stella</title>
+  
+  <title>Kull 1 – Springer Spaniel valper til salgs | Kennel Stella</title>
+
+  <meta name="description" content="Se vårt første kull med Engelsk Springer Spaniel valper. Valpene er fra jakt- og familievennlige linjer. Kontakt Kennel Stella for tilgjengelighet.">
+  <meta name="keywords" content="springer spaniel kull, valper til salgs, jakthund spaniel, engelsk springer spaniel valper, familiehund valper">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Kennel Stella">
+
+  <!-- Open Graph (sosiale medier) -->
+  <meta property="og:title" content="Kull 1 – Springer Spaniel valper | Kennel Stella">
+  <meta property="og:description" content="Vårt første kull med Engelsk Springer Spaniel valper – perfekte for både jakt og familie.">
+  <meta property="og:image" content="images/bowie-hero.jpg">
+  <meta property="og:url" content="https://dittdomene.no/kull1.html">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="logo-container">
@@ -18,93 +33,102 @@
     <nav>
       <a href="index.html#om">Om Oss</a>
       <a href="index.html#foreldre">Foreldre</a>
-      <a href="kull1.html">Kull 1</a>
+      <a href="kull1.html" aria-current="page">Kull 1</a>
       <a href="index.html#kontakt">Kontakt</a>
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('images/bowie-hero.jpg');">
-    <h1>Kull 1</h1>
-  </section>
-  
+  <main>
+    <section class="hero" style="background-image: url('images/bowie-hero.jpg');">
+      <h1>Kull 1 – Springer Spaniel valper</h1>
+      <p>Fra jakt- og familievennlige linjer</p>
+    </section>
 
-  <!-- Valpe 1 -->
-  <section class="content">
-    <h2>Valp 1</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="valp1-track">
-        <div class="carousel-item"><img src="images/valp1-1.jpg" alt="Valp 1 - bilde 1"></div>
-        <div class="carousel-item"><img src="images/valp1-2.jpg" alt="Valp 1 - bilde 2"></div>
-      </div>
-      <div class="carousel-buttons">
-        <button onclick="moveCarousel('valp1-track', -1)">←</button>
-        <button onclick="moveCarousel('valp1-track', 1)">→</button>
-      </div>
-    </div>
-  </section>
+    <!-- Valpevisning -->
+    <section class="content">
+      <h2>Valpene</h2>
+      <p>Her er bilder av våre fem valper. Alle er oppvokst i trygge omgivelser, sosialisert og klare for nye hjem.</p>
+    </section>
 
-  <!-- Valp 2 -->
-  <section class="content">
-    <h2>Valp 2</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="valp2-track">
-        <div class="carousel-item"><img src="images/valp2-1.jpg" alt="Valp 2 - bilde 1"></div>
-        <div class="carousel-item"><img src="images/valp2-2.jpg" alt="Valp 2 - bilde 2"></div>
+    <!-- Repetisjon for hver valp -->
+    <section class="content">
+      <h3>Valp 1</h3>
+      <div class="carousel">
+        <div class="carousel-track" id="valp1-track">
+          <div class="carousel-item"><img src="images/valp1-1.jpg" alt="Springer spaniel valp 1 – bilde 1"></div>
+          <div class="carousel-item"><img src="images/valp1-2.jpg" alt="Springer spaniel valp 1 – bilde 2"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveCarousel('valp1-track', -1)">←</button>
+          <button onclick="moveCarousel('valp1-track', 1)">→</button>
+        </div>
       </div>
-      <div class="carousel-buttons">
-        <button onclick="moveCarousel('valp2-track', -1)">←</button>
-        <button onclick="moveCarousel('valp2-track', 1)">→</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Valp 3 -->
-  <section class="content">
-    <h2>Valp 3</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="valp3-track">
-        <div class="carousel-item"><img src="images/valp3-1.jpg" alt="Valp 3 - bilde 1"></div>
-        <div class="carousel-item"><img src="images/valp3-2.jpg" alt="Valp 3 - bilde 2"></div>
+    <!-- Duplikat for Valp 2–5 med riktig alt-tekst -->
+    <!-- Valp 2 -->
+    <section class="content">
+      <h3>Valp 2</h3>
+      <div class="carousel">
+        <div class="carousel-track" id="valp2-track">
+          <div class="carousel-item"><img src="images/valp2-1.jpg" alt="Springer spaniel valp 2 – bilde 1"></div>
+          <div class="carousel-item"><img src="images/valp2-2.jpg" alt="Springer spaniel valp 2 – bilde 2"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveCarousel('valp2-track', -1)">←</button>
+          <button onclick="moveCarousel('valp2-track', 1)">→</button>
+        </div>
       </div>
-      <div class="carousel-buttons">
-        <button onclick="moveCarousel('valp3-track', -1)">←</button>
-        <button onclick="moveCarousel('valp3-track', 1)">→</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Valp 4 -->
-  <section class="content">
-    <h2>Valp 4</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="valp4-track">
-        <div class="carousel-item"><img src="images/valp4-1.jpg" alt="Valp 4 - bilde 1"></div>
-        <div class="carousel-item"><img src="images/valp4-2.jpg" alt="Valp 4 - bilde 2"></div>
+    <!-- Valp 3 -->
+    <section class="content">
+      <h3>Valp 3</h3>
+      <div class="carousel">
+        <div class="carousel-track" id="valp3-track">
+          <div class="carousel-item"><img src="images/valp3-1.jpg" alt="Springer spaniel valp 3 – bilde 1"></div>
+          <div class="carousel-item"><img src="images/valp3-2.jpg" alt="Springer spaniel valp 3 – bilde 2"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveCarousel('valp3-track', -1)">←</button>
+          <button onclick="moveCarousel('valp3-track', 1)">→</button>
+        </div>
       </div>
-      <div class="carousel-buttons">
-        <button onclick="moveCarousel('valp4-track', -1)">←</button>
-        <button onclick="moveCarousel('valp4-track', 1)">→</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Valp 5 -->
-  <section class="content">
-    <h2>Valp 5</h2>
-    <div class="carousel">
-      <div class="carousel-track" id="valp5-track">
-        <div class="carousel-item"><img src="images/valp5-1.jpg" alt="Valp 5 - bilde 1"></div>
-        <div class="carousel-item"><img src="images/valp5-2.jpg" alt="Valp 5 - bilde 2"></div>
+    <!-- Valp 4 -->
+    <section class="content">
+      <h3>Valp 4</h3>
+      <div class="carousel">
+        <div class="carousel-track" id="valp4-track">
+          <div class="carousel-item"><img src="images/valp4-1.jpg" alt="Springer spaniel valp 4 – bilde 1"></div>
+          <div class="carousel-item"><img src="images/valp4-2.jpg" alt="Springer spaniel valp 4 – bilde 2"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveCarousel('valp4-track', -1)">←</button>
+          <button onclick="moveCarousel('valp4-track', 1)">→</button>
+        </div>
       </div>
-      <div class="carousel-buttons">
-        <button onclick="moveCarousel('valp5-track', -1)">←</button>
-        <button onclick="moveCarousel('valp5-track', 1)">→</button>
+    </section>
+
+    <!-- Valp 5 -->
+    <section class="content">
+      <h3>Valp 5</h3>
+      <div class="carousel">
+        <div class="carousel-track" id="valp5-track">
+          <div class="carousel-item"><img src="images/valp5-1.jpg" alt="Springer spaniel valp 5 – bilde 1"></div>
+          <div class="carousel-item"><img src="images/valp5-2.jpg" alt="Springer spaniel valp 5 – bilde 2"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveCarousel('valp5-track', -1)">←</button>
+          <button onclick="moveCarousel('valp5-track', 1)">→</button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Kennel Stella.</p>
+    <p>&copy; 2025 Kennel Stella. Alle rettigheter reservert.</p>
   </footer>
 
   <script>
