@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stella – Kennel Stella</title>
+
+  <title>Stella – Engelsk Springer Spaniel | Kennel Stella</title>
+
+  <meta name="description" content="Stella er en sosial og arbeidsglad engelsk springer spaniel med jaktlig bakgrunn. Se bilder og stamtavle.">
+  <meta name="keywords" content="springer spaniel, engelsk springer spaniel, stella springer, kennel stella, jakthund, familiehund, stamtavle springer spaniel">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Kennel Stella">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stella – Engelsk Springer Spaniel | Kennel Stella">
+  <meta property="og:description" content="Stella er vår egen sosiale og arbeidsglade springer spaniel fra jaktlinjer. Se bilder og stamtavle her.">
+  <meta property="og:image" content="images/stella-hero.jpg">
+  <meta property="og:url" content="https://dittdomene.no/stella.html">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    .carousel img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    .pedigree-frame {
+      border: 2px solid #aaa;
+      padding: 1rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .pedigree-frame img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <div class="logo-container">
@@ -23,31 +63,45 @@
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('images/stella-hero.jpg');">
-    <h1>Stella</h1>
-  </section>
+  <main>
+    <section class="hero" style="background-image: url('images/stella-hero.jpg');">
+      <h1>Stella – vår engelsk springer spaniel</h1>
+    </section>
 
-  <section class="content">
-    <p>
-      Stella er datteren til vårt første arbeidende engelsk springer spaniel som heter Storm. Hun er kul og uredd ute, og med en utrettelig kjærlighet til å hente pinne.
-      Inne er hun en kosejente av dimensjoner. Alt i alt en vennlig sjel. Til daglig bor hun i sentrum av Bergen sammen med mamma Ine og pappa Simen.
-    </p>
-  </section>
+    <section class="content">
+      <h2>Om Stella</h2>
+      <p>
+        Stella er datter av vår første arbeidende Engelsk Springer Spaniel, Storm. Hun er tøff, uredd og elsker å jobbe – spesielt med apport og pinnehenting.
+        Samtidig er hun en utrolig kosete og rolig familiehund inne. Hun bor i sentrum av Bergen med mamma Ine og pappa Simen, hvor hun får det beste fra både byliv og friluft.
+      </p>
+    </section>
 
-  <section class="carousel">
-    <div class="carousel-track" id="stella-track">
-      <div class="carousel-item"><img src="images/stella2.jpg" alt="Stella 1"></div>
-      <div class="carousel-item"><img src="images/stella3.jpg" alt="Stella 2"></div>
-      <div class="carousel-item"><img src="images/stella4.jpg" alt="Stella 3"></div>
-    </div>
-    <div class="carousel-buttons">
-      <button onclick="moveCarousel('stella-track', -1)">←</button>
-      <button onclick="moveCarousel('stella-track', 1)">→</button>
-    </div>
-  </section>
+    <!-- Stamtavle seksjon -->
+    <section class="pedigree-frame">
+      <h2>Stamtavle</h2>
+      <p>Her er Stella sin offisielle stamtavle fra NKK:</p>
+      <img src="stamtavle.png" alt="Stella sin stamtavle - Engelsk Springer Spaniel">
+    </section>
+
+    <!-- Karusell med bilder -->
+    <section class="content">
+      <h2>Bilder av Stella</h2>
+      <div class="carousel">
+        <div class="carousel-track" id="stella-track">
+          <div class="carousel-item"><img src="images/stella2.jpg" alt="Stella i skogen – bilde 1"></div>
+          <div class="carousel-item"><img src="images/stella3.jpg" alt="Stella apporterer pinne – bilde 2"></div>
+          <div class="carousel-item"><img src="images/stella4.jpg" alt="Stella i sofaen – bilde 3"></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveCarousel('stella-track', -1)">←</button>
+          <button onclick="moveCarousel('stella-track', 1)">→</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Kennel Stella.</p>
+    <p>&copy; 2025 Kennel Stella. Alle rettigheter reservert.</p>
   </footer>
 
   <script>
@@ -64,3 +118,4 @@
   </script>
 </body>
 </html>
+
