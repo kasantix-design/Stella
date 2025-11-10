@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://dittdomene.netlify.app/sitemap.xml
