@@ -3,10 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kennel Stella</title>
+  
+  <title>Springer Spaniel valper til salgs | Kennel Stella</title>
+
+  <meta name="description" content="Vi tilbyr arbeidende Engelsk Springer Spaniel valper fra sunne og jaktlige linjer. Perfekte som jakthund og familiehund. Kontakt Kennel Stella i dag!">
+  <meta name="keywords" content="springer spaniel valper, jakthund valp, engelsk springer spaniel oppdretter, valper til salgs, spaniel norge, familiehund, jaktspaniel">
+  <meta name="author" content="Kennel Stella">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (for deling på Facebook, etc.) -->
+  <meta property="og:title" content="Springer Spaniel valper til salgs – Kennel Stella" />
+  <meta property="og:description" content="Engelsk Springer Spaniel valper fra arbeidende linjer. Passer både for jakt og som familiehund. Kontakt oss for mer info." />
+  <meta property="og:image" content="images/stella-hero.jpg" />
+  <meta property="og:url" content="https://dittdomene.no" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon og stil -->
+  <link rel="icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="logo-container">
@@ -23,59 +40,60 @@
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('images/stella-hero.jpg');">
-    <h1>Velkommen til Kennel Stella</h1>
-  </section>
+  <main>
+    <section class="hero" style="background-image: url('images/stella-hero.jpg');">
+      <h1>Springer Spaniel valper fra arbeidende linjer</h1>
+      <p>Jakt og familie – fra kjærlighet til bruksegenskaper</p>
+    </section>
 
-  <section id="om" class="content">
-    <h2>Om Oss</h2>
-    <p>
-      Vi tilbyr trygge og rolige omgivelser for våre hunder. Vi har ingen kull nå, men vi venter i fremtiden. Følg med!
-    </p>
-  </section>
+    <section id="om" class="content">
+      <h2>Om Kennel Stella</h2>
+      <p>
+        Vi er en liten oppdretter av Engelsk Springer Spaniel med fokus på sunne, stabile og arbeidsglade hunder. Våre hunder brukes aktivt i jakt og passer også som familiehunder. Vi tilbyr trygge og rolige omgivelser for oppvekst og sosialisering. Følg med – nytt kull er på vei!
+      </p>
+    </section>
 
-  <section id="foreldre" class="content gallery">
-    <h2>Foreldre</h2>
-    <div class="images">
-      <div class="gallery-item">
-        <a href="bowie.html">
-          <img src="images/bowie1.jpg" alt="Bowie">
-        </a>
-        <p>Bowie</p>
+    <section id="foreldre" class="content gallery">
+      <h2>Foreldre</h2>
+      <div class="images">
+        <div class="gallery-item">
+          <a href="bowie.html">
+            <img src="images/bowie1.jpg" alt="Springer spaniel hanhund Bowie">
+          </a>
+          <p>Bowie – arbeidende hanhund</p>
+        </div>
+        <div class="gallery-item">
+          <a href="stella.html">
+            <img src="images/stella1.jpg" alt="Springer spaniel tispe Stella">
+          </a>
+          <p>Stella – lojal og trygg familiehund</p>
+        </div>
       </div>
-      <div class="gallery-item">
-        <a href="stella.html">
-          <img src="images/stella1.jpg" alt="Stella">
-        </a>
-        <p>Stella</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="kontakt" class="content">
-    <h2>Kontakt</h2>
-    <p>Lars og Reidun Sandvik</p>
-    <p>Email: kasantix@gmail.com</p>
-    <p>Telefon: +47 416 46 966</p>
-  </section>
+    <section id="kontakt" class="content">
+      <h2>Kontakt oss</h2>
+      <p>Lars og Reidun Sandvik</p>
+      <p>E-post: <a href="mailto:kasantix@gmail.com">kasantix@gmail.com</a></p>
+      <p>Telefon: <a href="tel:+4741646966">+47 416 46 966</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Kennel Stella. Nettside bygget av Reidun Sandvik.</p>
   </footer>
 
-  <!-- Flyttet hit -->
   <script>
-  function moveCarousel(id, direction) {
-    const track = document.getElementById(id);
-    const totalItems = track.children.length;
-    const width = track.offsetWidth;
-    const current = Math.round(track.scrollLeft / width);
-    let newIndex = current + direction;
-    if (newIndex < 0) newIndex = totalItems - 1;
-    if (newIndex >= totalItems) newIndex = 0;
-    track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
-  }
+    function moveCarousel(id, direction) {
+      const track = document.getElementById(id);
+      const totalItems = track.children.length;
+      const width = track.offsetWidth;
+      const current = Math.round(track.scrollLeft / width);
+      let newIndex = current + direction;
+      if (newIndex < 0) newIndex = totalItems - 1;
+      if (newIndex >= totalItems) newIndex = 0;
+      track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
+    }
   </script>
 </body>
 </html>
-
