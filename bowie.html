@@ -3,177 +3,284 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bowie – Kennel Stella</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+  <title>Walther – Engelsk Springer Spaniel | Kennel Stella</title>
+  <meta
+    name="description"
+    content="Walther er en trygg, sosial og arbeidsglad Engelsk Springer Spaniel hos Kennel Stella. Les mer om Walther, hans bakgrunn og se stamtavlen."
+  />
+  <meta name="author" content="Kennel Stella" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#173328" />
+
+  <link rel="canonical" href="https://dittdomene.no/walther.html" />
+  <link rel="icon" href="images/favicon.ico" />
+
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:title" content="Walther – Engelsk Springer Spaniel | Kennel Stella" />
+  <meta
+    property="og:description"
+    content="Walther er vår trygge og arbeidsglade Engelsk Springer Spaniel. Se mer om hans bakgrunn og stamtavle hos Kennel Stella."
+  />
+  <meta property="og:image" content="https://dittdomene.no/images/walther-hero.jpg" />
+  <meta property="og:url" content="https://dittdomene.no/walther.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kennel Stella" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Walther – Engelsk Springer Spaniel | Kennel Stella" />
+  <meta
+    name="twitter:description"
+    content="Les mer om Walther hos Kennel Stella."
+  />
+  <meta name="twitter:image" content="https://dittdomene.no/images/walther-hero.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 
   <style>
-    body {
-      font-family: 'Comic Neue', cursive;
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .profile-card {
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .profile-facts {
+      display: grid;
+      gap: 0.9rem;
       margin: 0;
-      padding: 0;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #f7f7f7;
+    .profile-facts div {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
+    .profile-facts div:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
     }
 
-    .logo-link {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: black;
+    .profile-facts dt {
+      margin: 0;
+      font-weight: 700;
+      color: var(--forest-800);
     }
 
-    .logo-link img {
-      height: 50px;
-      margin-right: 10px;
+    .profile-facts dd {
+      margin: 0;
+      color: var(--stone-800);
     }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: black;
-    }
-
-    .hero {
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    }
-
-    .content {
-      padding: 2rem;
-      font-size: 1.2rem;
-    }
-
-    .carousel {
-      max-width: 100%;
+    .image-frame {
       overflow: hidden;
-      margin: 2rem auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
     }
 
-    .carousel-track {
-      display: flex;
-      scroll-behavior: smooth;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-    }
-
-    .carousel-item {
-      flex: 0 0 100%;
-      scroll-snap-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .carousel-item img {
+    .image-frame img {
       width: 100%;
       height: auto;
-      max-height: 800px; /* Øk for enda større bilder */
-      object-fit: cover;
+      display: block;
     }
 
-    .carousel-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
+    .image-caption {
+      padding: 1rem 1.25rem 1.2rem;
+      color: var(--stone-700);
+      margin: 0;
     }
 
-    .carousel-buttons button {
-      font-size: 2rem;
-      margin: 0 1rem;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
+    @media (max-width: 900px) {
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #f0f0f0;
-      margin-top: 3rem;
+    @media (max-width: 600px) {
+      .profile-facts div {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
     }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Kennel Stella logo">
-        <span>Kennel Stella</span>
-      </a>
-    </div>
-    <nav>
-      <a href="index.html#om">Om Oss</a>
-      <a href="index.html#foreldre">Foreldre</a>
-      <a href="kull1.html">Kull 1</a>
-      <a href="index.html#kontakt">Kontakt</a>
-    </nav>
-  </header>
 
-  <section class="hero bowie-hero" style="background-image: url('images/bowie-hero.jpg');">
-    <h1>Bowie</h1>
-  </section>
-  
-  <section class="content">
-    <p>
-      Bowie er en vakker og livlig danske. Han har en veldig flott stamtavle, god helse og en leken. Først og fremst er Bowie en høfflig og vennlig ung mann.
-      Vi ved Kennel Stella er veldig glad for å skulle få Bowie som stolt far til våre valper.
-    </p>
-  </section>
-   <!-- Stamtavle seksjon -->
-    <section class="pedigree-frame">
-      <h2>Stamtavle</h2>
-      <p>Her er Bowie sin offisielle stamtavle</p>
-      <img src="images/stamtavle-bowie.png" alt="Bowie sin stamtavle - Engelsk Springer Spaniel">
+<body>
+  <a class="skip-link" href="#main-content">Hopp til innhold</a>
+
+  <div id="site-navbar"></div>
+
+  <main id="main-content">
+    <section
+      class="hero"
+      aria-label="Walther"
+      style="background:
+        linear-gradient(rgba(16, 36, 27, 0.52), rgba(16, 36, 27, 0.52)),
+        url('images/walther-hero.jpg') center center / cover no-repeat;"
+    >
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Foreldredyr</p>
+          <h1>Walther – vår Engelsk Springer Spaniel</h1>
+          <p class="hero-lead">
+            En stødig, sosial og arbeidsglad hund med gode bruksegenskaper og et rolig,
+            trygt vesen i hverdagen.
+          </p>
+          <div class="hero-actions">
+            <a href="#om-walther" class="button button-primary">Les mer</a>
+            <a href="#stamtavle" class="button button-secondary">Se stamtavle</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-  <section class="carousel">
-    <div class="carousel-track" id="bowie-track">
-      <div class="carousel-item"><img src="images/bowie2.jpg" alt="Bowie 1"></div>
-      <div class="carousel-item"><img src="images/bowie3.jpg" alt="Bowie 2"></div>
-      <div class="carousel-item"><img src="images/bowie4.jpg" alt="Bowie 3"></div>
-      <div class="carousel-item"><img src="images/Bowie2.webp" alt="Bowie 4"></div>
-      <div class="carousel-item"><img src="images/FullSizeR1 (3).JPG" alt="Bowie 5"></div>
-    </div>
-    <div class="carousel-buttons">
-      <button onclick="moveCarousel('bowie-track', -1)">←</button>
-      <button onclick="moveCarousel('bowie-track', 1)">→</button>
-    </div>
-  </section>
+    <section id="om-walther" class="content">
+      <div class="container narrow">
+        <p class="section-label">Om Walther</p>
+        <h2>En trygg og arbeidsglad hannhund</h2>
+      </div>
 
-  <footer>
-    <div class="logo-container">
-      <a href="index.html" class="logo-link">
-        <img src="images/logo.png" alt="Kennel Stella logo">
-    <p>&copy; 2025 Kennel Stella.</p>
-  </footer>
+      <div class="container profile-grid">
+        <div>
+          <p>
+            Walther er en sosial og stødig Engelsk Springer Spaniel med godt gemytt,
+            fin arbeidslyst og en trygg framtoning. Han er en hund som trives godt i aktivitet,
+            og som samtidig er rolig og harmonisk i hjemmemiljø.
+          </p>
+          <p>
+            Han viser gode egenskaper både i arbeid og i hverdagen, og kombinerer energi,
+            fokus og nærhet på en måte som gjør ham til en svært trivelig hund å leve med.
+            Dette er kvaliteter vi setter stor pris på i avlen.
+          </p>
+          <p>
+            Walther er en viktig del av Kennel Stella og representerer det vi ønsker å føre videre:
+            stabile hunder med godt temperament, arbeidsvilje og trygghet rundt mennesker.
+          </p>
+        </div>
 
-  <script>
-    function moveCarousel(id, direction) {
-      const track = document.getElementById(id);
-      const totalItems = track.children.length;
-      const width = track.offsetWidth;
-      const current = Math.round(track.scrollLeft / width);
-      let newIndex = current + direction;
-      if (newIndex < 0) newIndex = totalItems - 1;
-      if (newIndex >= totalItems) newIndex = 0;
-      track.scrollTo({ left: newIndex * width, behavior: 'smooth' });
-    }
-  </script>
+        <aside class="profile-card" aria-label="Fakta om Walther">
+          <dl class="profile-facts">
+            <div>
+              <dt>Navn</dt>
+              <dd>Walther</dd>
+            </div>
+            <div>
+              <dt>Rase</dt>
+              <dd>Engelsk Springer Spaniel</dd>
+            </div>
+            <div>
+              <dt>Type</dt>
+              <dd>Arbeidende linjer</dd>
+            </div>
+            <div>
+              <dt>Gemytt</dt>
+              <dd>Trygg, sosial og stødig</dd>
+            </div>
+            <div>
+              <dt>Styrker</dt>
+              <dd>Arbeidslyst, fokus og godt familiepreg</dd>
+            </div>
+            <div>
+              <dt>Rolle</dt>
+              <dd>Far til kullet</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content gallery-section">
+      <div class="container">
+        <p class="section-label">Bilder</p>
+        <h2>Walther i hverdagen</h2>
+
+        <div class="images">
+          <article class="gallery-item">
+            <img src="images/walther1.jpg" alt="Walther ute i naturen" />
+            <div class="gallery-copy">
+              <h3>Ute i aktivitet</h3>
+              <p>Walther trives godt ute og viser fin arbeidslyst og energi.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/walther2.jpg" alt="Walther i aktivitet" />
+            <div class="gallery-copy">
+              <h3>Fokus og driv</h3>
+              <p>Han kombinerer oppmerksomhet, arbeidsvilje og godt samarbeid.</p>
+            </div>
+          </article>
+
+          <article class="gallery-item">
+            <img src="images/walther3.jpg" alt="Walther i rolige omgivelser" />
+            <div class="gallery-copy">
+              <h3>Rolig hjemme</h3>
+              <p>I hverdagen er Walther en trygg og harmonisk hund med godt vesen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stamtavle" class="content highlight-section">
+      <div class="container narrow">
+        <p class="section-label">Stamtavle</p>
+        <h2>Walther sin stamtavle</h2>
+        <p>
+          Her kan du se Walther sin stamtavle. Den gir et godt innblikk i bakgrunnen
+          hans og linjene han kommer fra.
+        </p>
+
+        <div class="image-frame" style="margin-top: 2rem;">
+          <img
+            src="images/walther-stamtavle.png"
+            alt="Walther sin stamtavle - Engelsk Springer Spaniel"
+          />
+          <p class="image-caption">
+            Offisiell stamtavle for Walther.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content contact-section">
+      <div class="container narrow">
+        <p class="section-label">Mer informasjon</p>
+        <h2>Vil du vite mer om Walther?</h2>
+        <p>
+          Ta gjerne kontakt dersom du ønsker mer informasjon om Walther, hans bakgrunn
+          eller hans rolle som far til kullet.
+        </p>
+        <p class="cta-row">
+          <a href="index.html#kontakt" class="button button-primary">Kontakt oss</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="main.js"></script>
 </body>
 </html>
