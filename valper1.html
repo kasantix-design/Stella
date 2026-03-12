@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Valp 1 – Springer Spaniel valp | Kennel Stella</title>
+  <meta
+    name="description"
+    content="Se bilder og informasjon om Valp 1 fra Kennel Stella. Engelsk Springer Spaniel valp fra arbeidende linjer med trygg oppvekst og godt gemytt."
+  />
+  <meta name="author" content="Kennel Stella" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#173328" />
+
+  <link rel="canonical" href="https://dittdomene.no/valp1.html" />
+  <link rel="icon" href="images/favicon.ico" />
+
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:title" content="Valp 1 – Springer Spaniel valp | Kennel Stella" />
+  <meta
+    property="og:description"
+    content="Les mer om Valp 1 fra Kennel Stella. Se bilder, informasjon og kontakt oss ved interesse."
+  />
+  <meta property="og:image" content="https://dittdomene.no/images/valp1-1.jpg" />
+  <meta property="og:url" content="https://dittdomene.no/valp1.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kennel Stella" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Valp 1 – Springer Spaniel valp | Kennel Stella" />
+  <meta
+    name="twitter:description"
+    content="Se bilder og informasjon om Valp 1 fra Kennel Stella."
+  />
+  <meta name="twitter:image" content="https://dittdomene.no/images/valp1-1.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Behold eksisterende stiler og legg til nye for interaktive elementer */
+    .puppy-details-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .puppy-info-card {
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .puppy-facts {
+      display: grid;
+      gap: 0.9rem;
+      margin: 0;
+    }
+
+    .puppy-facts div {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .puppy-facts div:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .puppy-facts dt {
+      margin: 0;
+      font-weight: 700;
+      color: var(--forest-800);
+    }
+
+    .puppy-facts dd {
+      margin: 0;
+      color: var(--stone-800);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(176, 141, 87, 0.14);
+      color: var(--gold-700);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .carousel-section {
+      padding-top: 0;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      margin: 0;
+      position: relative; /* For like-knapp */
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* Ny stil for like-knapp */
+    .like-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .like-btn.liked {
+      background: var(--gold-500);
+      color: white;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .carousel-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      min-height: 52px;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--forest-800);
+      border-radius: var(--radius-sm);
+      background: var(--forest-800);
+      color: var(--cream-100);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+    }
+
+    .carousel-button:hover,
+    .carousel-button:focus {
+      background: var(--forest-700);
+      border-color: var(--gold-500);
+      transform: translateY(-1px);
+    }
+
+    .carousel-counter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      color: var(--stone-700);
+      font-weight: 600;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+      font-weight: 600;
+      color: var(--forest-700);
+    }
+
+    .back-link:hover {
+      color: var(--gold-700);
+    }
+
+    /* Ny stil for kommentarer-seksjon */
+    .comments-section {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* Ny stil for Q&A-skjema */
+    .qa-form {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      font-family: var(--font-family-primary);
+    }
+
+    .btn {
+      background: var(--forest-800);
+      color: var(--cream-100);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-weight: 600;
+      transition: var(--transition-fast);
+    }
+
+    .btn:hover {
+      background: var(--forest-700);
+    }
+
+    /* Ny stil for Q&A-seksjon */
+    .qa-section {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .qa-item {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .qa-item:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 900px) {
+      .puppy-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .puppy-facts div {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Hopp til innhold</a>
+
+  <div id="site-navbar"></div>
+
+  <main id="main-content">
+    <section
+      class="hero"
+      aria-label="Valp 1"
+      style="background:
+        linear-gradient(rgba(16, 36, 27, 0.52), rgba(16, 36, 27, 0.52)),
+        url('images/valp1-1.jpg') center center / cover no-repeat;"
+    >
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Valp 1</p>
+          <h1>Trygg og lovende Springer Spaniel valp</h1>
+          <p class="hero-lead">
+            En kontaktsøkende valp med fin nysgjerrighet, godt gemytt og en trygg start i livet.
+          </p>
+          <div class="hero-actions">
+            <a href="#bilder" class="button button-primary">Se bilder</a>
+            <a href="#kontakt" class="button button-secondary">Meld interesse</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="container narrow">
+        <a href="kull1.html" class="back-link" aria-label="Tilbake til kull 1">← Tilbake til kull 1</a>
+        <p class="section-label">Om valpen</p>
+        <h2>Valp 1</h2>
+      </div>
+
+      <div class="container puppy-details-grid">
+        <div>
+          <p>
+            Valp 1 er en harmonisk og sosial valp som viser fin kontakt med mennesker
+            og god trygghet i hjemmemiljøet.
+          </p>
+          <p>
+            Denne valpen passer godt for deg som ønsker en hund med godt gemytt,
+            nærhet til familien og gode forutsetninger både som aktiv familiehund
+            og til bruk.
+          </p>
+        </div>
+
+        <aside class="puppy-info-card" aria-label="Fakta om valpen">
+          <span class="status-badge">Ledig</span>
+
+          <dl class="puppy-facts" style="margin-top: 1rem;">
+            <div><dt>Navn</dt><dd>Valp 1</dd></div>
+            <div><dt>Kjønn</dt><dd>Tispe / Hannhund</dd></div>
+            <div><dt>Født</dt><dd>12. mars 2025</dd></div>
+            <div><dt>Leveringsklar</dt><dd>Fra 7. mai 2025</dd></div>
+            <div><dt>Foreldre</dt><dd>Stella og Walter</dd></div>
+            <div><dt>Temperament</dt><dd>Trygg, sosial og kontaktsøkende</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="bilder" class="content carousel-section">
+      <div class="container narrow">
+        <p class="section-label">Bilder</p>
+        <h2>Bildekarusell</h2>
+
+        <div class="carousel-wrapper" aria-label="Bilder av Valp 1">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Legg til like-knapper på hver slide -->
+            <figure class="carousel-slide">
+              <img src="images/bowie1.jpg" alt="Valp 1 ute i gresset" />
+              <button class="like-btn" data-image-id="valp1-1" aria-label="Lik bildet">❤️</button>
+            </figure>
+            <figure class="carousel-slide">
+              <img src="images/bowie2.jpg" alt="Valp 1 ser mot kamera" />
+              <button class="like-btn" data-image-id="valp1-2" aria-label="Lik bildet">❤️</button>
+            </figure>
+            <figure class="carousel-slide">
+              <img src="images/bowie3.jpg" alt="Valp 1 hviler i hagen" />
+              <button class="like-btn" data-image-id="valp1-3" aria-label="Lik bildet">❤️</button>
+            </figure>
+            <figure class="carousel-slide">
+              <img src="images/bowie1.jpg" alt="Valp 1 i profil" />
+              <button class="like-btn" data-image-id="valp1-4" aria-label="Lik bildet">❤️</button>
+            </figure>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-button" type="button" id="prev-button" aria-label="Forrige bilde">←</button>
+          <div class="carousel-counter" id="carousel-counter">1 / 4</div>
+          <button class="carousel-button" type="button" id="next-button" aria-label="Neste bilde">→</button>
+        </div>
+
+        <!-- Kommentarfelt under karusellen -->
+        <div class="comments-section">
+          <h3>Kommentarer til bildene</h3>
+          <p>Likes lagres kun i din nettleser for å huske dine preferanser. Ingen data sendes til oss eller tredjeparter.</p>
+          <!-- Utterances script for kommentarer -->
+          <script src="https://utteranc.es/client.js"
+                  repo="your-github-username/your-repo-name"  <!-- Erstatt med ditt repo -->
+                  issue-term="valp1-bilder"  <!-- Unik term for denne siden -->
+                  theme="github-light"
+                  crossorigin="anonymous"
+                  async>
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <section class="content highlight-section">
+      <div class="container narrow">
+        <p class="section-label">Mer om valpen</p>
+        <h2>Interesse for denne valpen?</h2>
+        <p>
+          Ta gjerne kontakt dersom du ønsker mer informasjon om utvikling, gemytt,
+          leveringstid eller hvordan vi følger opp valpene våre.
+        </p>
+        <p class="cta-row">
+          <a href="#kontakt" class="button button-primary">Kontakt oss</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="kontakt" class="content contact-section">
+      <div class="container narrow">
+        <p class="section-label">Kontakt</p>
+        <h2>Kontakt oss om Valp 1</h2>
+
+        <address class="contact-details">
+          <p><strong>Reidun og Lars Sandvik</strong></p>
+          <p>E-post: <a href="mailto:kasantix@gmail.com">kasantix@gmail.com</a></p>
+          <p>Telefon: <a href="tel:+4741646966">+47 416 46 966</a></p>
+        </address>
+
+        <!-- Q&A-skjema -->
+        <div class="qa-form">
+          <h3>Send inn spørsmål</h3>
+          <form action="https://formspree.io/f/your-form-id" method="POST">  <!-- Erstatt med din Formspree-ID -->
+            <label for="name">Navn (valgfritt):</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Ditt navn">
+            
+            <label for="email">E-post (valgfritt):</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="din@email.com">
+            
+            <label for="question">Spørsmål:</label>
+            <textarea id="question" name="question" class="form-textarea" rows="5" required placeholder="Skriv ditt spørsmål her..."></textarea>
+            
+            <button type="submit" class="btn">Send spørsmål</button>
+          </form>
+        </div>
+
+        <!-- Q&A-seksjon for manuelle svar -->
+        <div class="qa-section">
+          <h3>Ofte stilte spørsmål</h3>
+          <div class="qa-item">
+            <p><strong>Spørsmål:</strong> Hvordan er temperamentet til Valp 1?</p>
+            <p><strong>Svar:</strong> Valp 1 er trygg, sosial og kontaktsøkende, perfekt for en familie.</p>
+          </div>
+          <!-- Legg til flere manuelt etter hvert som du besvarer spørsmål -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="main.js"></script>
+  <script>
+    // Eksisterende karusell-script
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.getElementById("carousel-track");
+      const prevButton = document.getElementById("prev-button");
+      const nextButton = document.getElementById("next-button");
+      const counter = document.getElementById("carousel-counter");
+
+      if (!track || !prevButton || !nextButton || !counter) return;
+
+      const slides = Array.from(track.children);
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+        updateCarousel();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+        updateCarousel();
+      });
+
+      updateCarousel();
+
+      // Ny script for like-knapper
+      document.querySelectorAll('.like-btn').forEach(btn => {
+        const imageId = btn.dataset.imageId; // Unik ID per bilde
+        const likedKey = `liked_${imageId}`; // Nøkkel for localStorage
+        
+        // Sjekk om bildet allerede er likt
+        if (localStorage.getItem(likedKey)) {
+          btn.classList.add('liked');
+        }
+        
+        // Hendelse for klikk
+        btn.addEventListener('click', () => {
+          if (btn.classList.contains('liked')) {
+            // Fjern like
+            localStorage.removeItem(likedKey);
+            btn.classList.remove('liked');
+          } else {
+            // Legg til like
+            localStorage.setItem(likedKey, 'true');
+            btn.classList.add('liked');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
